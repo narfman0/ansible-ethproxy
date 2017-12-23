@@ -11,6 +11,7 @@
   pip:
     name: ethproxy
     extra_args: --user
+  become_user: "{{ ethproxy_user }}"
 
 - name: Generate systemd service file
   template: src=ethproxy.service

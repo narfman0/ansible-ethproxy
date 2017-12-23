@@ -1,0 +1,14 @@
+[Unit]
+Description=ethproxy
+After=network.target
+
+[Service]
+Type=simple
+User={{ ethproxy_user }}
+WorkingDirectory=/home/{{ ethproxy_user }}
+ExecStart={{ ethproxy_bin }} {{ ethproxy_cli_switch }} --wallet {{ ethproxy_wallet }} -PH {{ ethproxy_stratum_host }} -PP {{ ethproxy_stratum_port }} -PHF1 {{ ethproxy_stratum_failover1_host }} -PPF1 {{ ethproxy_stratum_failover1_port }} -PHF2 {{ ethproxy_stratum_failover2_host }} -PPF2 {{ ethproxy_stratum_failover2_port }} -PHF3 {{ ethproxy_stratum_failover3_host }} -PPF3 {{ ethproxy_stratum_failover3_port }}
+Restart={{ ethproxy_systemd_restart }}
+RestartSec={{ ethproxy_systemd_restart_sec }}
+
+[Install]
+WantedBy=multi-user.target

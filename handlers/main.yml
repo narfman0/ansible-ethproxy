@@ -1,0 +1,7 @@
+---
+- name: ethproxy changed
+  service:
+    name: ethproxy
+    state: restarted
+    enabled: yes
+  become: True

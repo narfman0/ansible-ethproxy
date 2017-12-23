@@ -1,0 +1,14 @@
+ethproxy_user: 'ethproxy'
+ethproxy_bin: '/home/{{ ethproxy_user }}/.local/bin/ethproxy'
+ethproxy_wallet: '0x1234567890'
+ethproxy_stratum_host: 'us1.ethermine.org'
+ethproxy_stratum_port: 4444
+ethproxy_stratum_failover1_host: 'us2.ethermine.org'
+ethproxy_stratum_failover1_port: 4444
+ethproxy_stratum_failover2_host: 'us1.ethermine.org'
+ethproxy_stratum_failover2_port: 4444
+ethproxy_stratum_failover3_host: 'us2.ethermine.org'
+ethproxy_stratum_failover3_port: 4444
+ethproxy_cli_switch: ''
+ethproxy_systemd_restart: 'always' # another good option is 'on-failure'
+ethproxy_systemd_restart_sec: 3 # seconds

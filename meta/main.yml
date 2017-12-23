@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: "Jon Robison"
+  description: "Ansible role that installs and configures [ethproxy](https://github.com/narfman0/eth-proxy/)"
+  license: GPL2
+  min_ansible_version: 1.9
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+  categories:
+    - cryptocurrency
+dependencies: []

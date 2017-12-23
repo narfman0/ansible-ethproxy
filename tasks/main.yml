@@ -1,0 +1,27 @@
+---
+- name: Create user
+  user: name={{ ethproxy_user }} comment="Ethproxy user"
+
+- name: Install pip
+  package:
+    name: python-pip
+    state: latest
+
+- name: Install ethproxy
+  pip:
+    name: ethproxy
+    extra_args: --user
+
+- name: Generate systemd service file
+  template: src=ethproxy.service
+            dest=/lib/systemd/system/
+            owner=root
+            group=root
+            mode=640
+  notify:
+  - ethproxy changed
+
+- name: Enable service
+  systemd:
+    name: ethproxy
+    enabled: yes

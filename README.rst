@@ -2,7 +2,7 @@ ethproxy
 ========
 
 .. image:: http://img.shields.io/badge/ansible--galaxy-ethproxy-blue.svg
-  :target: https://galaxy.ansible.com/narfman0/ansible-ethproxy/
+  :target: https://galaxy.ansible.com/narfman0/ethproxy/
 
 .. image:: https://travis-ci.org/narfman0/ansible-ethproxy.png?branch=master
     :target: https://travis-ci.org/narfman0/ansible-ethproxy
